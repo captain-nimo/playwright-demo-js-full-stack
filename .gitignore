@@ -22,7 +22,6 @@ playwright-report/
 .DS_Store
 
 # Dependencies
-package-lock.json
 yarn.lock
 
 # Optional npm cache directory

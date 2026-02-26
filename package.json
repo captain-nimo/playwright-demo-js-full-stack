@@ -13,7 +13,6 @@
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
     "test:watch": "playwright test --watch",
-    "pretest": "npm run check:env",
     "check:env": "node scripts/check-env.js"
   },
   "keywords": [
