@@ -32,8 +32,15 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run all tests with reporters
-        run: npm test -- --reporter=html --reporter=json --reporter=junit
+      - name: Setup environment
+        run: |
+          if [ ! -f config/.env ]; then
+            cp config/.env.example config/.env
+            echo "✓ Created .env from .env.example"
+          fi
+
+      - name: Run all tests
+        run: npm test
         continue-on-error: true
 
       - name: Upload test results
